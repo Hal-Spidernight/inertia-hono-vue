@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" vapor>
 import { Head, Link } from '@inertiajs/vue3'
 import type { PageMap } from '../../pages'
 import Layout from '../Layout.vue'

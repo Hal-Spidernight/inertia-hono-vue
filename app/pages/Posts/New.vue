@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" vapor>
 import { Head, useForm } from '@inertiajs/vue3'
 import Layout from '../Layout.vue'
 
