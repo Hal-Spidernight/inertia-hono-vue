@@ -1,6 +1,6 @@
 import type { MiddlewareHandler, TypedResponse } from 'hono'
 import { Link, Script, ViteClient } from 'vite-ssr-components/hono'
-import type { PageName } from '../app/pages.gen'
+import type { PageMap, PageName } from '../app/pages'
 
 type PageObject = {
   component: string
@@ -9,12 +9,15 @@ type PageObject = {
   version: string | null
 }
 
+type RenderArgs<C extends PageName> = {} extends PageMap[C]
+  ? [component: C, props?: PageMap[C]]
+  : [component: C, props: PageMap[C]]
+
 declare module 'hono' {
   interface ContextRenderer {
-    <C extends PageName, P = Record<string, never>>(
-      component: C,
-      props?: P
-    ): Response & TypedResponse<{ component: C; props: P }, 200, 'html'>
+    <C extends PageName>(
+      ...args: RenderArgs<C>
+    ): Response & TypedResponse<{ component: C; props: PageMap[C] }, 200, 'html'>
   }
   interface NotFoundResponse extends Response, TypedResponse<string, 404, 'text'> {}
 }

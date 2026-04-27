@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { Head, Link } from '@inertiajs/vue3'
-import type { PageProps } from '../../pages.gen'
+import type { PageMap } from '../../pages'
 import Layout from '../Layout.vue'
 
-defineProps<PageProps<'Posts/Index'>>()
+defineProps<PageMap['Posts/Index']>()
 </script>
 
 <template>
