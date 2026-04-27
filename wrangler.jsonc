@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "inertia-hono-vue",
+  "compatibility_date": "2025-08-03",
+  "main": "./app/server.ts"
+}

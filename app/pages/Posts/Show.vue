@@ -1,0 +1,20 @@
+<script setup lang="ts">
+import { Head, Link } from '@inertiajs/vue3'
+import type { PageProps } from '../../pages.gen'
+import Layout from '../Layout.vue'
+
+defineProps<PageProps<'Posts/Show'>>()
+</script>
+
+<template>
+  <Layout>
+    <Head :title="post.title" />
+    <article>
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.body }}</p>
+    </article>
+    <p>
+      <Link href="/posts">← Back to posts</Link>
+    </p>
+  </Layout>
+</template>
