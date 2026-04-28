@@ -1,6 +1,6 @@
 import type { MiddlewareHandler, TypedResponse } from 'hono'
 import { Link, Script, ViteClient } from 'vite-ssr-components/hono'
-import type { PageMap, PageName } from '../app/pages'
+import type { PageMap, PageName } from '../app/pages.gen'
 
 type PageObject = {
   component: string

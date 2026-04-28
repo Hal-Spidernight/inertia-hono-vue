@@ -1,6 +1,6 @@
 <script setup lang="ts" vapor>
 import { Head, Link } from '@inertiajs/vue3'
-import type { PageMap } from '../../pages'
+import type { PageMap } from '../../pages.gen'
 import Layout from '../Layout.vue'
 
 defineProps<PageMap['Posts/Show']>()

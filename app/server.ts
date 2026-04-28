@@ -2,7 +2,7 @@ import { zValidator } from '@hono/zod-validator'
 import { Hono } from 'hono'
 import { z } from 'zod'
 import { renderer } from '../src/renderer'
-import type { Post } from './pages'
+import type { Post } from './types'
 
 const posts: Post[] = [
   { id: 1, title: 'Hello, Hono', body: 'Hono is a small, fast web framework.' },
