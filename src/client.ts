@@ -2,6 +2,7 @@ import { createInertiaApp } from '@inertiajs/vue3'
 import { vaporInteropPlugin } from '@vue/runtime-vapor'
 import type { DefineComponent } from 'vue'
 import { createApp, h } from 'vue'
+import './style.css'
 
 createInertiaApp({
   resolve: async (name) => {

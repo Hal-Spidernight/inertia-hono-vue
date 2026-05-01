@@ -1,9 +1,9 @@
 <script setup lang="ts" vapor>
-import { Head } from '@inertiajs/vue3'
-import type { PageMap } from '../pages.gen'
-import Layout from './Layout.vue'
+import { Head } from "@inertiajs/vue3";
+import type { PageMap } from "../pages.gen";
+import Layout from "./Layout.vue";
 
-defineProps<PageMap['Home']>()
+defineProps<PageMap["Home"]>();
 </script>
 
 <template>
